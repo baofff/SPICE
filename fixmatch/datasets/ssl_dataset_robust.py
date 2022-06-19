@@ -87,6 +87,9 @@ class SSL_Dataset:
         if self.name == "cifar10":
             dset = CIFAR10(root=self.data_dir, all=self.all, train=self.train)
             data = dset.data
+        elif self.name == 'torchvision_cifar10_train':
+            dset = torchvision.datasets.CIFAR10(root=self.data_dir, train=True)
+            data = dset.data
         elif self.name == "cifar100":
             dset = CIFAR20(root=self.data_dir, all=self.all, train=self.train)
             data = dset.data
