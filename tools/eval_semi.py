@@ -89,6 +89,7 @@ if __name__ == "__main__":
     '''
     parser.add_argument('--batch_size', type=int, default=100)
     parser.add_argument('--data_dir', type=str, default='./datasets/cifar10')
+    parser.add_argument('--train_data', type=int, default=0)
     parser.add_argument('--dataset', type=str, default='cifar10')
     parser.add_argument('--num_classes', type=int, default=10)
     parser.add_argument('--label_file', type=str, default=None)
@@ -130,7 +131,7 @@ if __name__ == "__main__":
         net.cuda()
     net.eval()
     
-    _eval_dset = SSL_Dataset(name=args.dataset, train=False, data_dir=args.data_dir, label_file=None, all=args.all, unlabeled=False)
+    _eval_dset = SSL_Dataset(name=args.dataset, train=args.train_data, data_dir=args.data_dir, label_file=None, all=args.all, unlabeled=False)
     # print(args.all)
 
     eval_dset = _eval_dset.get_dset()
