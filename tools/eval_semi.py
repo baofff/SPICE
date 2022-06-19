@@ -157,6 +157,7 @@ if __name__ == "__main__":
 
     scores = np.concatenate(scores, axis=0)
     labels_pred = np.concatenate(labels_pred, axis=0)
+    np.save(f'{args.dataset}_cluster.npy', labels_pred)
     labels_gt = np.concatenate(labels_gt, axis=0)
     try:
         acc = calculate_acc(labels_pred, labels_gt)
