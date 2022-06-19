@@ -95,7 +95,12 @@ if __name__ == "__main__":
     parser.add_argument('--label_file', type=str, default=None)
     parser.add_argument('--all', type=int, default=0)
     parser.add_argument('--unlabeled', type=bool, default=False)
+    parser.add_argument('--seed', type=int, default=0)
+
     args = parser.parse_args()
+
+    torch.manual_seed(args.seed)
+    np.random.seed(args.seed)
     
     checkpoint_path = os.path.join(args.load_path)
     checkpoint = torch.load(checkpoint_path)
