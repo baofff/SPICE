@@ -31,7 +31,7 @@ std['npy224'] = [0.229, 0.224, 0.225]
 
 
 def get_transform(mean, std, dataset, train=True):
-    if dataset in ['cifar10', 'cifar20', 'cifar100']:
+    if dataset in ['cifar10', 'cifar20', 'cifar100', 'torchvision_cifar10_train']:
         crop_size = 32
     elif dataset in ['stl10', 'npy']:
         crop_size = 96
