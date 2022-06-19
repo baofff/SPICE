@@ -16,12 +16,14 @@ from torchvision import datasets, transforms
 
 mean, std = {}, {}
 mean['cifar10'] = [x / 255 for x in [125.3, 123.0, 113.9]]
+mean['torchvision_cifar10_train'] = mean['cifar10']
 mean['cifar100'] = [x / 255 for x in [129.3, 124.1, 112.4]]
 mean['stl10'] = [0.485, 0.456, 0.406]
 mean['npy'] = [0.485, 0.456, 0.406]
 mean['npy224'] = [0.485, 0.456, 0.406]
 
 std['cifar10'] = [x / 255 for x in [63.0, 62.1, 66.7]]
+std['torchvision_cifar10_train'] = std['cifar10']
 std['cifar100'] = [x / 255 for x in [68.2,  65.4,  70.4]]
 std['stl10'] = [0.229, 0.224, 0.225]
 std['npy'] = [0.229, 0.224, 0.225]
