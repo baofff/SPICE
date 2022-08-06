@@ -163,7 +163,7 @@ if __name__ == "__main__":
     scores = np.concatenate(scores, axis=0)
     labels_pred = np.concatenate(labels_pred, axis=0)
     split = 'train' if args.train_data else 'test'
-    name = f'SPICE_torchvision_cifar10_{split}_cluster_{args.num_classes}.npy'
+    name = f'SPICE_{args.dataset}_{split}_cluster_{args.num_classes}.npy'
     np.save(name, labels_pred)
     labels_gt = np.concatenate(labels_gt, axis=0)
     try:
