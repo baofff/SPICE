@@ -26,12 +26,13 @@ This is a Pytorch implementation of the [paper](https://arxiv.org/pdf/2103.09382
 
 ## Installation
 Please refer to [requirement.txt](./requirements.txt) for all required packages.
-Assuming [Anaconda](https://www.anaconda.com/) with python 3.7, a step-by-step example for installing this project is as follows:
+Assuming [Anaconda](https://www.anaconda.com/) with python 3.8, a step-by-step example for installing this project is as follows:
 
 ```shell script
-conda install pytorch==1.6.0 torchvision==0.7.0 cudatoolkit=10.1 -c pytorch
+conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
 conda install -c conda-forge addict tensorboard python-lmdb
 conda install matplotlib scipy scikit-learn pillow
+conda install -c anaconda seaborn
 ```
 
 Then, clone this repo
@@ -103,6 +104,9 @@ More models based on ResNet18 for both SPICE-Self* and SPICE-Semi*.
 - [SCAN](https://github.com/wvangansbeke/Unsupervised-Classification)
 - [FixMatch](https://github.com/LeeDoYup/FixMatch-pytorch)
 - [IIC](https://github.com/xu-ji/IIC)
+
+### License
+This project is under the CC-BY-NC 4.0 license. See [LICENSE](LICENSE) for details.
 
 ## Citation
 
