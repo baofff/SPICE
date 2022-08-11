@@ -71,7 +71,7 @@ data_train = dict(
 
 data_test = dict(
     type="cifar10",
-    root_folder="./datasets/cifar10",
+    root_folder="assets/datasets/cifar10",
     embedding=embedding,
     train=True,
     all=True,
