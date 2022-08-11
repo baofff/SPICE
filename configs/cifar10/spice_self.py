@@ -1,4 +1,5 @@
-model_name = "spice_self"
+num_cluster = 10
+model_name = "spice_self_{}".format(num_cluster)
 # pre_model = "./results/cifar10/moco/checkpoint_0999.pth.tar"
 pre_model = "./results/cifar10/moco_res18_cls/checkpoint_0999.pth.tar"
 embedding = "./results/cifar10/embedding/feas_moco_512_l2.npy"
@@ -12,7 +13,6 @@ num_head = 10
 num_workers = 4
 device_id = 0
 num_train = 5
-num_cluster = 10
 batch_size = 5000
 target_sub_batch_size = 100
 train_sub_batch_size = 128
