@@ -15,7 +15,7 @@ multiprocessing_distributed = True
 
 data_test = dict(
     type="cifar10",
-    root_folder="./datasets/cifar10",
+    root_folder="assets/datasets/cifar10",
     embedding=None,
     train=True,
     all=False,
