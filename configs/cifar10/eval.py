@@ -1,9 +1,9 @@
-model_name = "eval"
+num_cluster = 10
+model_name = "eval_{}".format(num_cluster)
 # weight = './model_zoo/self_model_cifar10.pth.tar'
-weight = './results/cifar10/spice_self/checkpoint_best.pth.tar'
+weight = './results/cifar10/spice_self_{}/checkpoint_best.pth.tar'.format(num_cluster)
 # model_type = "clusterresnet"
 model_type = "resnet18_cifar"
-num_cluster = 10
 batch_size = 1000
 fea_dim = 512
 center_ratio = 0.5
@@ -18,7 +18,7 @@ gpu = 0
 
 data_test = dict(
     type="cifar10",
-    root_folder="./datasets/cifar10",
+    root_folder="assets/datasets/cifar10",
     embedding=None,
     train=True,
     all=False,
